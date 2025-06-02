@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday, Love! 🎉</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #d0e7f9; /* soft sky blue */
+      color: #03396c; /* dark blue text */
+    }
+    #cakePopup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+      animation: fadeIn 1s ease-out;
+    }
+    #cakePopup img {
+      width: 250px;
+      animation: popIn 2s ease-out;
+    }
+    header {
+      background-color: #4a90e2;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      animation: fadeInDown 1.5s ease-out;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      background-color: #b3d1f5;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      animation: fadeIn 2s ease-in;
+    }
+    section {
+      padding: 2rem;
+      animation: fadeInUp 1s ease-out;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    section img {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    footer {
+      background-color: #b3d1f5;
+      text-align: center;
+      padding: 2rem;
+      color: #03396c;
+      font-size: 1.1rem;
+    }
+    #playBtn {
+      display: none;
+      margin: 1rem auto;
+      padding: 0.5rem 1rem;
+      font-size: 1.2rem;
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: block;
+    }
+    audio {
+      display: none;
+    }
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes popIn {
+      from {
+        transform: scale(0);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+  </style>
+  <script>
+    window.onload = () => {
+      setTimeout(() => {
+        document.getElementById('cakePopup').style.display = 'none';
+      }, 2000);
+
+      const audio = document.getElementById('bgMusic');
+      const playBtn = document.getElementById('playBtn');
+
+      audio.play().catch(() => {
+        // Autoplay failed, show play button
+        playBtn.style.display = 'block';
+      });
+
+      playBtn.onclick = () => {
+        audio.play();
+        playBtn.style.display = 'none';
+      };
+    };
+  </script>
+</head>
+<body>
+  <div id="cakePopup">
+    <img src="https://static-00.iconduck.com/assets.00/birthday-cake-emoji-2048x2048-cc86vi1k.png" alt="Birthday Cake" />
+  </div>
+
+  <header>
+    <h1>Happy Birthday, My Love! 🎂💖</h1>
+  </header>
+
+  <audio id="bgMusic" loop>
+    <source src="sheene.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <button id="playBtn">▶️ Play Music</button>
+
+  <section id="letters">
+    <h2>Happy Birthday Shini</h2>
+    <p>Today is all about you, and I just want to take a moment to remind you how incredibly special you are to me.</p>
+    <p>I love you more than words can ever say. Every day with you feels like a dream come true. Thank you for being my baby, my laughter, and my peace.</p>
+    <p>We’ve been through many ups and downs, but we’ve always pulled through. I wish for this year to bring you happines, new adventures, and dreams coming true. Remember, I’m here for you every step of the way, cheering you on and loving you more each day.</p>
+    <p>Happy Birthday, babyyyy</p>
+<p>mwaaaaaaaaaaaaaaaaaaaaa</p>
+    <img src="photo1.jpg" alt="A special moment with you" />
+  </section>
+
+  <footer>
+    <p>Thank you for making life so beautiful. I love you forever. 💗</p>
+  </footer>
+</body>
+</html>
